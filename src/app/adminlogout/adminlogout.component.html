@@ -1,0 +1,27 @@
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: black;">
+    <div class="container">
+        <a class="navbar-brand" style="font-family: 'Lobster';" routerLink="/adminhome" routerLinkActive="active"><h3 style="font-family: 'Lobster';">AUMN Events</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" routerLink="/adminhome" routerLinkActive="active">Add Events</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/seeevents" routerLinkActive="active">Events</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/adminlogout" routerLinkActive="active">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div style="margin-top: 250px;border: 50px;border-color: black; border: 2px solid;margin-left: 275px; margin-right: 275px;box-shadow: 5px 5px;">
+    <div style="padding: 10px;">
+    <h3 style="text-align:center">Are You Sure You Want to Log Out?</h3>
+    <div style="margin-left: 350px;margin-top: 50px;margin-bottom: 10px;align-items: center;">
+    <button type="button" class="btn btn-warning btn-lg ms-2" style="width: 90px;height: 70px;" routerLink="/adminhome" routerLinkActive="active">No</button>
+    <button type="button" class="btn btn-black btn-lg ms-2" style="width: 90px;height: 70px;" routerLink="/login" routerLinkActive="active">Yes</button>
+    </div>
+</div>
+
+
+</div>

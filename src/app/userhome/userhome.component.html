@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav" style="background-color: black;">
+    <div class="container">
+        <a class="navbar-brand" style="font-family: 'Lobster';" routerLink="/userhome" routerLinkActive="active"><h3 style="font-family: 'Lobster';">AUMN Events</h3></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            Menu
+            <i class="fas fa-bars ms-1"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                <li class="nav-item"><a class="nav-link" routerLink="/userhome" routerLinkActive="active">Events</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/myevents" routerLinkActive="active">My Events</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/profile" routerLinkActive="active">My Profile</a></li>
+                <li class="nav-item"><a class="nav-link" routerLink="/logout" routerLinkActive="active">Log Out</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- <div style="margin-top: 10px;"></div> -->
+  <section class="page-section bg-light" id="portfolio">
+    <div class="container">
+        <div class="text-center">
+            <h2 class="section-heading text-uppercase">Upcoming Events</h2>
+            <h3 class="section-subheading text-muted">Book and Enjoy Your Events</h3>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 col-sm-6 mb-4" *ngFor= "let i of events1">
+                <!-- Portfolio item 1-->
+                <div class="portfolio-item">
+                    <a class="portfolio-link" data-bs-toggle="modal" href="#portfolioModal1">
+                        <div class="portfolio-hover">
+                            <div class="portfolio-hover-content"><i class="fas fa-plus fa-3x"></i></div>
+                        </div>
+                        <img class="img-fluid" src="assets/{{i.poster_path}}" alt="..." style="height: 250px; width: 400px;"/>
+                    </a>
+                    <div class="portfolio-caption">
+                        <div class="portfolio-caption-heading">{{i.ename}}</div>
+                        <div class="portfolio-caption-subheading text-muted">Event ID: {{i.id}}</div>
+                        <div class="portfolio-caption-subheading text-muted">Start Date: {{i.start_date}}</div>
+                        <div class="portfolio-caption-subheading text-muted">End Date: {{i.end_date}}</div>
+                        <div class="portfolio-caption-subheading text-muted">Helper Name: {{i.help_name}}</div>
+                        <div class="portfolio-caption-subheading text-muted">Helper Number: {{i.help_num}}</div>
+                        <div class="portfolio-caption-subheading text-muted">About Event: {{i.description}}</div>
+                        <button type="button" class="btn btn-warning btn-lg ms-2" (click) = "submit(i);">Book Now</button>
+                    </div>
+                </div>
+            </div>   
+        </div>            
+            
+    </div>
+</section>
+
+
+

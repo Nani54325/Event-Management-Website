@@ -1,0 +1,46 @@
+<section class="h-100 bg-dark">
+  
+   <div class="container py-5 h-100">
+     <div class="row d-flex justify-content-center align-items-center h-100">
+       <div class="col">
+         <div class="card card-registration my-4">
+           <div class="row g-0">
+             <div class="col-xl-6 d-none d-xl-block">
+               <img src="https://clipartix.com/wp-content/uploads/2017/03/Clipart-welcome-back-3.jpg"
+                 alt="Sample photo" class="img-fluid"
+                 style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;" />
+             </div>
+             <div class="col-xl-6">
+               <div class="card-body p-md-5 text-black">
+                 <h3 class="mb-5 text-uppercase">AUMN Events Login</h3>
+                 <form #insert="ngForm" [formGroup] = "loginform1" (ngSubmit) = "login(insert)">
+                 <div class="row">
+                 <div class="form-outline mb-4">
+                   <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName = "id" />
+                   <label class="form-label" for="form3Example8">User ID: </label>
+                   <span *ngIf = "id && id.invalid && id.touched" style="color: red"> Invalid</span>
+                 </div>
+                 <div class="form-outline mb-4">
+                   <input type="text" id="form3Example90" class="form-control form-control-lg"  formControlName = "password" />
+                   <label class="form-label" for="form3Example90">password</label>
+                   <span *ngIf = "password && password.invalid && password.touched" style="color: red"> Invalid</span>
+                 </div>
+                 <div class="d-flex justify-content-end pt-3">
+                   
+                   <button type="button" class="btn btn-warning btn-lg ms-2" (click) = "submit();">Login</button>
+                   <button type="button" class="btn btn-black btn-lg ms-2" routerLink="/home" routerLinkActive="active">Home</button>
+                   
+               </div>
+               <br>
+               <div style="margin-left: 292px;">Don't have an Account? <a href="" routerLink="/signup" routerLinkActive="active">Signup here</a></div>
+               
+                 </div>
+                 </form>
+               </div>
+             </div>
+           </div>
+         </div>
+       </div>
+     </div>
+   </div>
+ </section>

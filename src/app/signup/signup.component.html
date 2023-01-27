@@ -1,0 +1,94 @@
+<section class="h-100 bg-dark">
+  
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col">
+          <div class="card card-registration my-4">
+            <div class="row g-0">
+              <div class="col-xl-6 d-none d-xl-block">
+                <img src="https://wallpaperaccess.com/full/2249936.jpg"
+                  alt="Sample photo" class="img-fluid"
+                  style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem; height: 1050px;width: 960px;" />
+              </div>
+              <div class="col-xl-6">
+                <div class="card-body p-md-5 text-black">
+                  <h3 class="mb-5 text-uppercase">AUMN Events Registration</h3>
+                  <form #insert="ngForm" [formGroup] = "loginform" (ngSubmit) = "login(insert)">
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m" class="form-control form-control-lg" formControlName = "first"/>
+                        
+                        <label class="form-label" for="form3Example1m">First name</label>
+                        <span *ngIf = "first && first.invalid && first.touched" style="color: red"> Invalid</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n" class="form-control form-control-lg" formControlName = "last"  required />
+                        <label class="form-label" for="form3Example1n">Last name</label>
+                        <span *ngIf = "last && last.invalid && last.touched" style="color: red"> Invalid</span>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <div class="row">
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1m1" class="form-control form-control-lg" formControlName = "mother"  />
+                        <label class="form-label" for="form3Example1m1">Mother's name</label>
+                        <span *ngIf = "mother && mother.invalid && mother.touched" style="color: red"> Invalid</span>
+                      </div>
+                    </div>
+                    <div class="col-md-6 mb-4">
+                      <div class="form-outline">
+                        <input type="text" id="form3Example1n1" class="form-control form-control-lg" formControlName = "father" />
+                        <label class="form-label" for="form3Example1n1">Father's name</label>
+                        <span *ngIf = "father && father.invalid && father.touched" style="color: red"> Invalid</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example97" class="form-control form-control-lg"  formControlName = "email"  />
+                    <label class="form-label" for="form3Example97">Email ID</label>
+                    <span *ngIf = "email && email.invalid && email.touched" style="color: red"> Invalid</span>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example97" class="form-control form-control-lg"  formControlName = "mobile"  />
+                    <label class="form-label" for="form3Example97">Mobile</label>
+                    <span *ngIf = "mobile && mobile.invalid && mobile.touched" style="color: red"> Invalid</span>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example8" class="form-control form-control-lg" formControlName = "address" />
+                    <label class="form-label" for="form3Example8">Address</label>
+                    <span *ngIf = "address && address.invalid && address.touched" style="color: red"> Invalid</span>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example90" class="form-control form-control-lg"  formControlName = "password" />
+                    <label class="form-label" for="form3Example90">password</label>
+                    <span *ngIf = "password && password.invalid && password.touched" style="color: red"> Invalid</span>
+                  </div>
+                  <div class="form-outline mb-4">
+                    <input type="text" id="form3Example90" class="form-control form-control-lg"  formControlName = "cpassword" />
+                    <label class="form-label" for="form3Example90">Confirm password</label>
+                    <span *ngIf = "cpassword && cpassword.invalid && cpassword.touched" style="color: red"> Invalid</span>
+                  </div>
+                  <div class="d-flex justify-content-end pt-3">
+                    
+                    <button type="button" class="btn btn-warning btn-lg ms-2" (click) = "submit();">Submit form</button>
+                    <button type="button" class="btn btn-black btn-lg ms-2" routerLink="/home" routerLinkActive="active">Home</button>
+                    
+                </div>
+                <br>
+                <div style="margin-left: 292px;">Already have an account? <a href="" routerLink="/login" routerLinkActive="active">Login here</a></div>
+                
+                  
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,49 @@
+.carousel .item {
+    height: 550px;
+  }
+  .about-section {
+    padding: 50px;
+    text-align: center;
+    color: black;
+  }
+  .carousel-caption {
+  left: 0%;
+  text-align: left;
+  max-width: 300px;
+  right: 0px;
+  padding:5px;
+  margin-right: 0px;
+  top: 0px;
+  }
+  .cap{
+    text-align: center;
+  }
+  .footer{
+    background: black;
+    color:white;
+    
+    .links{
+      ul {list-style-type: none;}
+      li a{
+        color: white;
+        transition: color .2s;
+        &:hover{
+          text-decoration:none;
+          color:#4180CB;
+          }
+      }
+    }  
+    .about-company{
+      i{font-size: 25px;}
+      a{
+        color:white;
+        transition: color .2s;
+        &:hover{color:#4180CB}
+      }
+    } 
+    .location{
+      i{font-size: 18px;}
+    }
+    .copyright p{border-top:1px solid rgba(255,255,255,.1);} 
+  }
+  
